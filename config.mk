@@ -13,13 +13,10 @@
 # limitations under the License.
 
 # Automated
-$(call inherit-product, vendor/google/pixel/pixel-vendor.mk)
-
-# Bootanimation
-include vendor/google/pixel/bootanimation/bootanimation.mk
+$(call inherit-product, vendor/gapps/common/common-vendor.mk)
 
 # Fonts
-include vendor/google/pixel/fonts/fonts.mk
+include vendor/gapps/common/fonts/fonts.mk
 
 # Gboard
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -46,8 +43,8 @@ PRODUCT_PACKAGES += \
     PixelSettingsOverlay \
     PixelSystemUIOverlay
 
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/google/pixel/overlay/static
-PRODUCT_PACKAGE_OVERLAYS += vendor/google/pixel/overlay/static
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/gapps/common/overlay/static
+PRODUCT_PACKAGE_OVERLAYS += vendor/gapps/common/overlay/static
 
 # Prebuilts
 PRODUCT_PACKAGES += \
